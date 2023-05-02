@@ -35,26 +35,27 @@ public class SecurityConfig {
 ////    }
 
 // gan len database
-    @Bean
-    public UserDetailsService userDetailsService  (DataSource dataSource){
-        UserDetails user = User.builder()
-                .username("user")
-                .password("$2a$10$LuZOPauQr8myH7sx5VqiT.W8698A4o6.WPRNbjZ4Ms7mozp0SE4H2")
-                .roles("USER")
-                .build();
 
-        UserDetails admin = User.builder()
-                .username("admin")
-                .password("$2a$10$LF.zzWc0zQuqB1ryCF2Wiu5Jm5egowAmgrvpA9fICyT4I.mQFfdca")
-                .roles("USER", "ADMIN")
-                .build();
-
-        JdbcUserDetailsManager users = new JdbcUserDetailsManager(dataSource);
-        users.createUser(user);
-        users.createUser(admin);
-        return new InMemoryUserDetailsManager(user, admin);
-    }
-
+//    @Bean
+//    public UserDetailsService userDetailsService  (DataSource dataSource){
+//        UserDetails user = User.builder()
+//                .username("user")
+//                .password("$2a$10$LuZOPauQr8myH7sx5VqiT.W8698A4o6.WPRNbjZ4Ms7mozp0SE4H2")
+//                .roles("USER")
+//                .build();
+//
+//        UserDetails admin = User.builder()
+//                .username("admin")
+//                .password("$2a$10$LF.zzWc0zQuqB1ryCF2Wiu5Jm5egowAmgrvpA9fICyT4I.mQFfdca")
+//                .roles("USER", "ADMIN")
+//                .build();
+//
+//        JdbcUserDetailsManager users = new JdbcUserDetailsManager(dataSource);
+//        users.createUser(user);
+//        users.createUser(admin);
+//        return new InMemoryUserDetailsManager(user, admin);
+//    }
+//
     @Bean
     public PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();

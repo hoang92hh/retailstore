@@ -26,18 +26,18 @@ public class DataSourceConfig {
 ////        System.out.println("build data success");
 //         return dataSourceBuilder.build();
 //    }
-
-    @Bean(name = "dataSoure")
-//    @Primary
-    public DataSource dataSource() {
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName("org.postgresql.Driver");
-        dataSource.setUrl("jdbc:postgresql://localhost:5432/retail_store_youtube");
-        dataSource.setUsername("postgres");
-        dataSource.setPassword("h123");
-        System.out.println("tao duoc datasoure");
-        return dataSource;
-    }
+//
+//    @Bean(name = "dataSoure")
+////    @Primary
+//    public DataSource dataSource() {
+//        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+//        dataSource.setDriverClassName("org.postgresql.Driver");
+//        dataSource.setUrl("jdbc:postgresql://localhost:5432/retail_store_youtube");
+//        dataSource.setUsername("postgres");
+//        dataSource.setPassword("h123");
+//        System.out.println("tao duoc datasoure");
+//        return dataSource;
+//    }
 
 
 
