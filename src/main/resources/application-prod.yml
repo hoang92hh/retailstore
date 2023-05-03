@@ -1,0 +1,11 @@
+server:
+  servlet:
+    context-path: /demo
+  port: 7777
+
+spring:
+  jpa:
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false

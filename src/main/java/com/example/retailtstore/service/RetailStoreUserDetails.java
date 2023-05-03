@@ -15,27 +15,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-@Service
-public class RetailStoreUserDetails implements UserDetailsService {
+//@Service
+//public class RetailStoreUserDetails implements UserDetailsService {
+//
+//
 
-
-
-    @Autowired
-    private CustomerRepository  customerRepository;
-
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-
-        List<Customer> customers = customerRepository.findByUsername(username);
-        if(customers.isEmpty()){
-            throw new UsernameNotFoundException("User detail not found for username = "+ username);
-
-        }
-        String password = customers.get(0).getPassword();
-        ArrayList<GrantedAuthority> authorities = new ArrayList<>();
-        authorities.add(new SimpleGrantedAuthority(customers.get(0).getRole()));
-
-
-        return new User(username, password, authorities);
-    }
-}
+//    @Autowired
+//    private CustomerRepository  customerRepository;
+//
+//    @Override
+//    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+//
+//        List<Customer> customers = customerRepository.findByUsername(username);
+//        if(customers.isEmpty()){
+//            throw new UsernameNotFoundException("User detail not found for username = "+ username);
+//
+//        }
+//        String password = customers.get(0).getPassword();
+//        ArrayList<GrantedAuthority> authorities = new ArrayList<>();
+//        authorities.add(new SimpleGrantedAuthority(customers.get(0).getRole()));
+//
+//
+//        return new User(username, password, authorities);
+//    }
+//}
