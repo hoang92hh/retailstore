@@ -5,7 +5,18 @@ server:
 
 spring:
   jpa:
-    show-sql: false
+    show-sql: true
     properties:
       hibernate:
         format_sql: false
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://tiny.db.elephantsql.com:5432/wpjqtfoz
+    username: wpjqtfoz
+    password: a6cE-ffl96JiyCi-aOIMW5wAA_2YspsV
+
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
