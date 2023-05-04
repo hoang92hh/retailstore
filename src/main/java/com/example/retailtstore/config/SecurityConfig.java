@@ -24,6 +24,7 @@ public class SecurityConfig {
         httpSecurity.csrf().disable()  // bao ve tan cong csrf , hien dang disable
                 .authorizeRequests()
                 .antMatchers("/v1/register").permitAll() // request khong can authen
+                .antMatchers("/v1/getAllAcount").authenticated() // request khong can authen
                 .antMatchers("/v1/greeting").authenticated() // request can authen
                 .and().formLogin()
                 .and().httpBasic();
