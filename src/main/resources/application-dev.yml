@@ -11,13 +11,6 @@ spring:
         format_sql: true
     hibernate:
       ddl-auto: update
-
-#  datasource:
-#    driver-class-name: org.postgresql.Driver
-#    url: jdbc:postgresql://localhost:5432/retail_store_youtube
-#    username: postgres
-#    password: h123
-
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://tiny.db.elephantsql.com:5432/wpjqtfoz
